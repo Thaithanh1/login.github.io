@@ -1,7 +1,8 @@
 <?php 
 	 //connect to posgest
-	$conn_string = "host=ec2-54-235-108-217.compute-1.amazonaws.com port=5432 dbname=de6cplsdloto02 user=fxurdbhagcxoyd password=c9c64b01094ac14a43421f76b665c655d0fafb2c0d10e4a6c3d766cdd75b416f";
-	$dbconn4 = pg_connect($conn_string);
+	$appName = $_SERVER['ec2-54-235-108-217.compute-1.amazonaws.com'] . $_SERVER['postgres://fxurdbhagcxoyd:c9c64b01094ac14a43421f76b665c655d0fafb2c0d10e4a6c3d766cdd75b416f@ec2-54-235-108-217.compute-1.amazonaws.com:5432/de6cplsdloto02'];
+        $connStr = "host=localhost port=3306 dbname=db_tune user=root options='--application_name=$appName'";
+
 	
 	  if(isset($_POST['login'])){
 	    //khi an nut loggin 
@@ -9,7 +10,7 @@
 	    $psw= $_POST['psw'];
 
 	    $sql = "SELECT * FROM tb_admin WHERE a_name = '$uname' AND a_password = '$psw'";
-	    $query = pg_query($dbconn4, $sql);
+	    $query = pg_query($conStr, $sql);
 	    $row = pg_num_rows($query);
 	    if($row == 1){
 	      echo "Dang Nhap Thanh Cong";
