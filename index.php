@@ -1,13 +1,12 @@
-<!--<?php 
-	// connect to posgest
-	$conn_string = "host=ec2-54-235-108-217.compute-1.amazonaws.com port=5432 dbname=test user=lamb password=bar";
-	$dbconn4 = pg_connect($conn_string);
-	
-
-
- ?>-->
 <?php
-	$dbconn2 = pg_connect("host=localhost port=5432 dbname=tb_tune" user="root");
+$appName = $_SERVER['ec2-54-235-108-217.compute-1.amazonaws.com'] . $_SERVER['postgres://fxurdbhagcxoyd:c9c64b01094ac14a43421f76b665c655d0fafb2c0d10e4a6c3d766cdd75b416f@ec2-54-235-108-217.compute-1.amazonaws.com:5432/de6cplsdloto02'];
+$connStr = "host=localhost port=5432 dbname=db_tune user=root options='--application_name=$appName'";
+
+//simple check
+$conn = pg_connect($connStr);
+$result = pg_query($conn, "select * from tb_admin");
+var_dump(pg_fetch_all($result));
+
 ?>
 <!DOCTYPE html>
 <html>
