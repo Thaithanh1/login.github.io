@@ -6,6 +6,9 @@
 
 
  ?>-->
+<?php
+	$dbconn2 = pg_connect("host=localhost port=5432 dbname=tb_tune" user="root");
+?>
 <!DOCTYPE html>
 <html>
 <head>
