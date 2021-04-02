@@ -1,11 +1,11 @@
-<?php 
+<!--<?php 
 	// connect to posgest
 	$conn_string = "host=ec2-54-235-108-217.compute-1.amazonaws.com port=5432 dbname=test user=lamb password=bar";
 	$dbconn4 = pg_connect($conn_string);
-	if 
+	
 
 
- ?>
+ ?>-->
 <!DOCTYPE html>
 <html>
 <head>
