@@ -10,7 +10,7 @@
 	    $uname = $_POST['uname'];
 	    $psw= $_POST['psw'];
 
-	    $sql = "SELECT * FROM tb_admin WHERE a_username = '$uname' AND a_password = '$psw'";
+	    $sql = "SELECT * FROM tb_admin WHERE a_name = '$uname' AND a_password = '$psw'";
 	    $query = pg_query($dbconn4, $sql);
 	    $row = pg_num_rows($query);
 	    if($row == 1){
