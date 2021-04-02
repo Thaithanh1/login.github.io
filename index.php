@@ -102,7 +102,7 @@ span.psw {
 <body>
 	<form method="post">
 	  <div class="imgcontainer">
-	    <img url="https://miro.medium.com/max/400/1*7c5wdOe8QXTgw_tfUi11rA.png" alt="Avatar" class="avatar">
+	    <img src="https://miro.medium.com/max/400/1*7c5wdOe8QXTgw_tfUi11rA.png" alt="Avatar" class="avatar">
 	  </div>
 
 	  <div class="container">
