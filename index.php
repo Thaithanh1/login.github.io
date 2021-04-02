@@ -2,6 +2,7 @@
 	 //connect to posgest
 	$appName = $_SERVER['ec2-54-235-108-217.compute-1.amazonaws.com'] . $_SERVER['postgres://fxurdbhagcxoyd:c9c64b01094ac14a43421f76b665c655d0fafb2c0d10e4a6c3d766cdd75b416f@ec2-54-235-108-217.compute-1.amazonaws.com:5432/de6cplsdloto02'];
         $connStr = "host=localhost port=3306 dbname=db_tune user=root options='--application_name=$appName'";
+	$dbconn4 = pg_connect($connStr)
 
 	
 	  if(isset($_POST['login'])){
@@ -10,7 +11,7 @@
 	    $psw= $_POST['psw'];
 
 	    $sql = "SELECT * FROM tb_admin WHERE a_name = '$uname' AND a_password = '$psw'";
-	    $query = pg_query($conStr, $sql);
+	    $query = pg_query($dbconn4, $sql);
 	    $row = pg_num_rows($query);
 	    if($row == 1){
 	      echo "Dang Nhap Thanh Cong";
