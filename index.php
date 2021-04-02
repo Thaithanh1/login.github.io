@@ -1,13 +1,11 @@
-<?php
-
-$connStr = "host=ec2-54-235-108-217.compute-1.amazonaws.com port=5432 dbname=de6cplsdloto02 user=fxurdbhagcxoyd ";
-
-//simple check
-$conn = pg_connect($connStr);
-$result = pg_query($conn, "select * from tb_admin");
-var_dump(pg_fetch_all($result));
-
-?>
+<?php 
+	 //connect to posgest
+	$conn_string = "host=ec2-54-235-108-217.compute-1.amazonaws.com port=5432 dbname=de6cplsdloto02 user=fxurdbhagcxoyd password=c9c64b01094ac14a43421f76b665c655d0fafb2c0d10e4a6c3d766cdd75b416f";
+	$dbconn4 = pg_connect($conn_string);
+	if($dbconn4){
+		echo "oke";
+	}
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
