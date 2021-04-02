@@ -1,6 +1,6 @@
 <?php
-$appName = $_SERVER['ec2-54-235-108-217.compute-1.amazonaws.com'] . $_SERVER['postgres://fxurdbhagcxoyd:c9c64b01094ac14a43421f76b665c655d0fafb2c0d10e4a6c3d766cdd75b416f@ec2-54-235-108-217.compute-1.amazonaws.com:5432/de6cplsdloto02'];
-$connStr = "host=ec2-54-235-108-217.compute-1.amazonaws.com port=5432 dbname=de6cplsdloto02 user=fxurdbhagcxoyd options='--application_name=$appName'";
+
+$connStr = "host=ec2-54-235-108-217.compute-1.amazonaws.com port=5432 dbname=de6cplsdloto02 user=fxurdbhagcxoyd ";
 
 //simple check
 $conn = pg_connect($connStr);
