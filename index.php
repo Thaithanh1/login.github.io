@@ -13,12 +13,12 @@
 	    $sql = "SELECT * FROM tb_admin WHERE a_name = '$uname' AND a_password = '$psw'";
 	    $query = pg_query($dbconn4, $sql);
 	    $row = pg_num_rows($query);
-	    if($row == 1){
-	      echo "Dang Nhap Thanh Cong";
-	    }
-	    else{
-	      echo "Sai thong tin dang nhap";
-	    }
+// 	    if($row == 1){
+// 	      echo "Dang Nhap Thanh Cong";
+// 	    }
+// 	    else{
+// 	      echo "Sai thong tin dang nhap";
+// 	    }
 
 	  }
  ?>
