@@ -2,8 +2,6 @@
 	 //connect to posgest
 	$conn_string = "host=ec2-54-235-108-217.compute-1.amazonaws.com port=5432 dbname=de6cplsdloto02 user=fxurdbhagcxoyd password=c9c64b01094ac14a43421f76b665c655d0fafb2c0d10e4a6c3d766cdd75b416f";
 	$dbconn4 = pg_connect($conn_string);
-	$conn_string = "host=ec2-54-235-108-217.compute-1.amazonaws.com port=5432 dbname=test user=lamb password=bar";
-	$dbconn4 = pg_connect($conn_string);
 	
 	  if(isset($_POST['login'])){
 	    //khi an nut loggin 
@@ -13,12 +11,12 @@
 	    $sql = "SELECT * FROM tb_admin WHERE a_name = '$uname' AND a_password = '$psw'";
 	    $query = pg_query($dbconn4, $sql);
 	    $row = pg_num_rows($query);
-// 	    if($row == 1){
-// 	      echo "Dang Nhap Thanh Cong";
-// 	    }
-// 	    else{
-// 	      echo "Sai thong tin dang nhap";
-// 	    }
+	    if($row == 1){
+	      echo "Dang Nhap Thanh Cong";
+	    }
+	    else{
+	      echo "Sai thong tin dang nhap";
+ 	    }
 
 	  }
  ?>
